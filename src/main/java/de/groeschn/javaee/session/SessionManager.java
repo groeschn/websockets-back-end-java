@@ -17,7 +17,7 @@ public class SessionManager {
     private List<Session> sessions;
 
     @PostConstruct
-    public void init() {
+    private void init() {
         this.sessions = new LinkedList<>();
     }
 

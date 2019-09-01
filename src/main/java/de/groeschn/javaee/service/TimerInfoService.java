@@ -21,7 +21,7 @@ public class TimerInfoService {
     private List<TimerInfo> timerInfos;
 
     @PostConstruct
-    public void init() {
+    private void init() {
         this.timerInfos = new LinkedList<>();
     }
 

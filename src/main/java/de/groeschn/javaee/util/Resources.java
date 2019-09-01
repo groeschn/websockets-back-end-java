@@ -18,7 +18,7 @@ public class Resources {
     private Jsonb jsonb;
 
     @PostConstruct
-    public void init() {
+    private void init() {
         jsonb = JsonbBuilder.newBuilder()
                 .withConfig(new JsonbConfig()
                         .withFormatting(true)).build();
