@@ -13,7 +13,6 @@
           </option>
           <option name="profilesMap">
             <map>
-              <entry key="default" value="true" />
               <entry key="run" value="true" />
             </map>
           </option>
