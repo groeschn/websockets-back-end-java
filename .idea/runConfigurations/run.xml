@@ -22,8 +22,6 @@
         </MavenRunnerParameters>
       </option>
     </MavenSettings>
-    <method>
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="clean package" run_configuration_type="MavenRunConfiguration" />
-    </method>
+    <method />
   </configuration>
 </component>
