@@ -1,13 +1,11 @@
 package de.groeschn.javaee.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.InjectionPoint;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import javax.json.bind.JsonbConfig;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -19,21 +17,20 @@ public class Resources {
 
     private Jsonb jsonb;
 
+    @PostConstruct
+    public void init() {
+        jsonb = JsonbBuilder.newBuilder()
+                .withConfig(new JsonbConfig()
+                        .withFormatting(true)).build();
+    }
+
     @Produces
     public EntityManager getEm() {
         return em;
     }
 
     @Produces
-    public Logger produceLogger(InjectionPoint injectionPoint) {
-        return LoggerFactory.getLogger(injectionPoint.getMember().getDeclaringClass().getName());
-    }
-
-    @Produces
     public Jsonb produceJsonb() {
-        if (jsonb == null) {
-            jsonb = JsonbBuilder.create();
-        }
         return jsonb;
     }
 }
