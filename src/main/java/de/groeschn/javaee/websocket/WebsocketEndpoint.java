@@ -3,7 +3,6 @@ package de.groeschn.javaee.websocket;
 import de.groeschn.javaee.service.TimerInfoService;
 import de.groeschn.javaee.session.SessionEvent;
 import de.groeschn.javaee.session.SessionEventAction;
-import de.groeschn.javaee.session.SessionManager;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.enterprise.event.Event;

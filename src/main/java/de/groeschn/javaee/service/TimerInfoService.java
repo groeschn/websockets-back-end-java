@@ -2,8 +2,8 @@ package de.groeschn.javaee.service;
 
 import de.groeschn.javaee.model.TimerInfo;
 import de.groeschn.javaee.session.SessionManager;
-import de.groeschn.javaee.websocket.TimerInfoMessageAction;
 import de.groeschn.javaee.websocket.TimerInfoMessage;
+import de.groeschn.javaee.websocket.TimerInfoMessageAction;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
